@@ -8,8 +8,10 @@ package org.scg.mcpserver.config;
  * @date 2025/5/19
  */
 import org.scg.mcpserver.service.GzhService;
+import org.scg.mcpserver.service.WeatherService;
 import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.ai.tool.function.FunctionToolCallback;
+import org.springframework.ai.tool.method.MethodToolCallbackProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -35,5 +37,13 @@ public class ToolCallbackProviderConfig {
                 recommendTool,
                 bestArticleTool
         ));
+    }
+
+
+    @Bean
+    public MethodToolCallbackProvider myTools(WeatherService weatherService) {
+        return MethodToolCallbackProvider.builder()
+                .toolObjects(weatherService)
+                .build();
     }
 }

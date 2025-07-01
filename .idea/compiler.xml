@@ -10,6 +10,7 @@
         <module name="free-chart" />
         <module name="mcp-server" />
         <module name="test" />
+        <module name="mcp-client" />
       </profile>
     </annotationProcessing>
   </component>
@@ -17,6 +18,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="client" options="-parameters" />
       <module name="free-chart" options="-parameters" />
+      <module name="mcp-client" options="-parameters" />
       <module name="mcp-server" options="-parameters" />
       <module name="test" options="-parameters" />
     </option>

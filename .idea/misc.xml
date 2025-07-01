@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/mcp-server/pom.xml" />
         <option value="$PROJECT_DIR$/free-chart/pom.xml" />
         <option value="$PROJECT_DIR$/test/pom.xml" />
+        <option value="$PROJECT_DIR$/mcp-client/pom.xml" />
       </list>
     </option>
   </component>

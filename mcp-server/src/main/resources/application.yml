@@ -1,9 +1,12 @@
-server:
-  port: 8080
-
 spring:
+  application:
+    name: mcp-server-demo
   ai:
     mcp:
       server:
-        name: mcp-server
-        sse-message-endpoint: /mcp/gzh
+        name: mcp-server-demo
+        version: 1.0.0
+        type: SYNC
+        sse-message-endpoint: /mcp/messages/sse
+  server:
+    port: 8080
