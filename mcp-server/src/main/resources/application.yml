@@ -1,12 +1,37 @@
 spring:
   application:
-    name: mcp-server-demo
+    name: java-mcp-demo
+    #  main:
+    # 必须禁用控制台日志和 banner，否则会干扰通信
+#    web-application-type: none  # STDIO必须禁用web应用类型
+#    banner-mode: off           # STDIO禁用banner
+---
+# Using spring-ai-starter-mcp-server
+spring:
   ai:
     mcp:
       server:
-        name: mcp-server-demo
+        name: stdio-mcp-server
+        version: 1.0.0
+        type: SYNC
+
+---
+# Using spring-ai-starter-mcp-server-webmvc
+spring:
+  ai:
+    mcp:
+      server:
+        name: webmvc-mcp-server
         version: 1.0.0
         type: SYNC
         sse-message-endpoint: /mcp/messages/sse
-  server:
-    port: 8080
+---
+# Using spring-ai-starter-mcp-server-webflux
+spring:
+  ai:
+    mcp:
+      server:
+        name: webflux-mcp-server
+        version: 1.0.0
+        type: ASYNC  # Recommended for reactive applications
+        sse-message-endpoint: /mcp/messages/sse
